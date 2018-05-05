@@ -1,0 +1,40 @@
+{
+  "name": "confirm-that",
+  "version": "0.0.0",
+  "description": "a confirm promise based",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/jest",
+    "test-watch": "npm test -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabsprates/confirm-that.git"
+  },
+  "keywords": [
+    "confirm",
+    "promise"
+  ],
+  "author": "Gabriel Prates <gabsprates@gmail.com> (http://gabrielprates.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gabsprates/confirm-that/issues"
+  },
+  "homepage": "https://github.com/gabsprates/confirm-that#readme",
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
+  },
+  "devDependencies": {
+    "babel-jest": "^23.0.1",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.9.1",
+    "jest": "^23.1.0"
+  }
+}
