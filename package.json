@@ -4,8 +4,9 @@
   "description": "a confirm promise based",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/jest",
-    "test-watch": "npm test -- --watch"
+    "test": "./node_modules/.bin/jest --config ./jest.config.js",
+    "test-watch": "npm test -- --watch",
+    "test-coverage": "npm test -- --coverage"
   },
   "repository": {
     "type": "git",
@@ -21,11 +22,6 @@
     "url": "https://github.com/gabsprates/confirm-that/issues"
   },
   "homepage": "https://github.com/gabsprates/confirm-that#readme",
-  "jest": {
-    "transform": {
-      "^.+\\.jsx?$": "babel-jest"
-    }
-  },
   "devDependencies": {
     "babel-jest": "^23.0.1",
     "babel-preset-env": "^1.7.0",
