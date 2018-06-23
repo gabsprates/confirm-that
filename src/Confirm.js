@@ -1,9 +1,24 @@
 class Confirm {
   constructor() {
     this.state = Confirm.defaultState;
-    this.template = Confirm.template();
     this.DOM = document.createElement('div');
     document.body.appendChild(this.DOM);
+  }
+
+  /**
+   * @param {{ title: string, message: string }} obj
+   */
+  setContent({ title, message }) {
+    this.state.title = title;
+    this.state.message = message;
+  }
+
+  render() {
+    const template = Confirm.template();
+    template.title.innerHTML = this.state.title;
+    template.msg.innerHTML = this.state.message;
+
+    console.log(template.box.outerHTML);
   }
 
   static template() {
@@ -19,6 +34,9 @@ class Confirm {
     btns.className = 'cfrm-btns';
     btnOk.className = 'cfrm-btns-ok';
     btnCancel.className = 'cfrm-btns-cancel';
+
+    btnOk.innerHTML = 'OK';
+    btnCancel.innerHTML = 'Cancel';
 
     box.appendChild(title);
     box.appendChild(msg);
